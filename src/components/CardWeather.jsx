@@ -41,8 +41,10 @@ const CardWeather = ({ lat, lon }) => {
 	} else {
 		return (
 			<article className="card">
-				<h1>Weather App</h1>
-				<h2>{`${weather?.name}, ${weather?.sys.country}`}</h2>
+				<div className="card__title">
+					<h1>Weather App</h1>
+					<h2>{`${weather?.name}, ${weather?.sys.country}`}</h2>
+				</div>
 				<div className="card__main">
 					<img
 						src={
@@ -75,13 +77,15 @@ const CardWeather = ({ lat, lon }) => {
 				<div className="card__temp">
 					<h3> Temperature</h3>
 					<div className="card__temp__info">
-						<button onClick={handleClick}>
+						<button className="card__btn" onClick={handleClick}>
 							{isCelsius ? 'Change to °F' : 'Change to °C'}
 						</button>
 						<h2>{isCelsius ? temperature.celsius : temperature.farenheit}</h2>
 					</div>
 				</div>
-				<DateTime />
+				<div className="card__time">
+					<DateTime />
+				</div>
 			</article>
 		);
 	}
