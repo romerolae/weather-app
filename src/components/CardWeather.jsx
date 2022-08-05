@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import LoadingScreen from './LoadingScreen';
+import DateTime from './DateTime';
 
 const CardWeather = ({ lat, lon }) => {
 	const [weather, setWeather] = useState();
@@ -80,6 +81,7 @@ const CardWeather = ({ lat, lon }) => {
 						<h2>{isCelsius ? temperature.celsius : temperature.farenheit}</h2>
 					</div>
 				</div>
+				<DateTime />
 			</article>
 		);
 	}

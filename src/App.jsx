@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import CardWeather from './components/CardWeather';
 import LoadingScreen from './components/LoadingScreen';
+import DateTime from './components/DateTime';
 
 function App() {
 	const [coords, setCoords] = useState();
