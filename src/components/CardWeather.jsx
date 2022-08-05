@@ -51,7 +51,10 @@ const CardWeather = ({ lat, lon }) => {
 						alt=""
 					/>
 					<div className="card__info">
-						<h3>&#34;{weather?.weather[0].description}&#34;</h3>
+						<h3 className="card__info__t">
+							&#34;{weather?.weather[0].description}&#34;
+						</h3>
+						<br />
 						<ul>
 							<li>
 								<span>Wind Speed : </span>
