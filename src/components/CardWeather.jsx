@@ -10,7 +10,7 @@ const CardWeather = ({ lat, lon }) => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		if (lon) {
+		if (lat) {
 			const APIKey = 'c26feb5172fea1b4ed16552aafaea45e';
 			const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${APIKey}`;
 

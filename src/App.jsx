@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import CardWeather from './components/CardWeather';
-
+import DateTime from './components/DateTime';
+import LoadingScreen from './components/LoadingScreen';
 function App() {
 	const [coords, setCoords] = useState();
 

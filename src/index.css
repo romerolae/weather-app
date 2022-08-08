@@ -13,7 +13,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: url(https://png.pngtree.com/background/20220716/original/pngtree-blue-atmospheric-weather-forecast-illustration-background-picture-image_1640760.jpg)
+	background: url(https://blog.desdelinux.net/wp-content/uploads/2019/02/weather-apps-linux.jpg)
 		no-repeat fixed;
 	background-size: cover;
 }
@@ -27,6 +27,7 @@ body {
 
 .card__main img {
 	height: 200px;
+	animation: slideInFromLeft 0.5s ease-in;
 }
 .card {
 	display: flex;
@@ -49,6 +50,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	animation: slideInFromTop 0.5s ease-in;
 }
 
 .card__title h1 {
@@ -58,6 +60,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	animation: slideInFromRight 0.5s ease-in;
 }
 
 .card__info__t {
@@ -82,6 +85,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	gap: 5px;
+	animation: slideInFromBottom 0.5s ease-in;
 }
 .card__temp__info {
 	display: flex;
@@ -119,4 +123,45 @@ body {
 
 .card__time p {
 	font-weight: 600;
+}
+
+/* Animations */
+
+@keyframes slideInFromLeft {
+	0% {
+		transform: translateX(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromRight {
+	0% {
+		transform: translateX(100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+@keyframes slideInFromTop {
+	0% {
+		transform: translateY(-100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slideInFromBottom {
+	0% {
+		transform: translateY(100%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
 }
